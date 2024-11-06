@@ -93,8 +93,7 @@ Es posible organizar el código en varios archivos e incluirlos en el programa:
 - **Minimizar Efectos Secundarios**: Las funciones deberían depender solo de sus parámetros y evitar modificar variables globales.
 
 ### Próximos Temas
-- **Control de Flujo**: Estructuras como `if`, `else`, `switch` y bucles (`for`, `while`, `foreach`).
-- **Manipulación Avanzada de Cadenas y Arreglos**: Técnicas avanzadas para manejar estos tipos de datos.
+
 - **Interacción con Bases de Datos**: Conectar PHP con bases de datos como MySQL.
 
 ---
