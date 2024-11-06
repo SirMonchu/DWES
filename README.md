@@ -1,25 +1,28 @@
-# Aprendiendo PHP
 
-## Introducción
-PHP es un lenguaje de programación de uso común especialmente adecuado para el desarrollo web. Con PHP, podemos generar contenido dinámico en las páginas web, gestionar formularios, interactuar con bases de datos y realizar muchas otras tareas esenciales para el desarrollo de aplicaciones web.
+# DWES
 
-Hasta ahora, hemos aprendido los conceptos fundamentales de PHP, incluyendo los **tipos de datos básicos** y su tratamiento, la **creación de funciones** y cómo utilizar otros archivos de código dentro de nuestros proyectos mediante `require` e `include`.
+**Repositorio de Ramón Romero Cárdenas**
 
 ---
 
-## Tipos de Datos Básicos en PHP
+## Aprendiendo PHP
 
-PHP maneja varios tipos de datos básicos que son esenciales para desarrollar aplicaciones web. Entre los tipos más comunes, encontramos:
+### Descripción
+PHP es un lenguaje de programación ampliamente utilizado en el desarrollo web, que permite la creación de contenido dinámico en páginas web, gestión de formularios, interacción con bases de datos y muchas otras funciones esenciales para aplicaciones web. 
 
-- **Enteros (`int`)**: Números enteros, positivos o negativos, sin decimales. Ejemplo: `5`, `-42`.
-- **Flotantes (`float`)**: Números con decimales. Ejemplo: `3.14`, `-0.99`.
-- **Cadenas (`string`)**: Texto. Ejemplo: `"Hola, PHP!"`.
-- **Booleanos (`bool`)**: Valores lógicos `true` o `false`, muy utilizados en operaciones de control de flujo.
-- **Arreglos (`array`)**: Estructuras que permiten almacenar múltiples valores en una sola variable. Pueden ser indexados o asociativos.
-- **Nulos (`null`)**: Representa una variable sin valor o una variable que ha sido eliminada.
+Hasta ahora, hemos explorado los conceptos básicos de PHP, incluyendo tipos de datos fundamentales, creación de funciones y la incorporación de código externo en nuestros proyectos mediante `require` e `include`.
 
-Ejemplo de declaración y uso de estos tipos de datos:
+### Tipos de Datos Básicos en PHP
+PHP soporta varios tipos de datos esenciales para el desarrollo web, entre los cuales se destacan:
 
+- **Enteros (int)**: Números enteros sin decimales, como `5` o `-42`.
+- **Flotantes (float)**: Números decimales, como `3.14` o `-0.99`.
+- **Cadenas (string)**: Texto, como `"Hola, PHP!"`.
+- **Booleanos (bool)**: Valores `true` o `false`, muy útiles para estructuras de control.
+- **Arreglos (array)**: Estructuras que almacenan múltiples valores en una sola variable, ya sean indexados o asociativos.
+- **Nulos (null)**: Indica que una variable no tiene valor.
+
+#### Ejemplo de Uso:
 ```php
 <?php
 $entero = 10;
@@ -33,25 +36,25 @@ echo $cadena; // Muestra "Hola, PHP!"
 ?>
 ```
 
-## Operaciones con Tipos de Datos
+### Operaciones Comunes
+PHP permite realizar diversas operaciones con estos tipos de datos, tales como:
 
-Ejemplos de operaciones en PHP:
+- **Operaciones Aritméticas**: Suma (`+`), resta (`-`), multiplicación (`*`), división (`/`).
+- **Concatenación de Cadenas**: Uso del operador `.` para unir textos.
 
-- **Operaciones aritméticas**: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`).
-- **Concatenación de cadenas**: Para unir cadenas de texto, se usa el operador `.`.
-
+#### Ejemplo:
 ```php
 <?php
 $nombre = "Ana";
 $edad = 25;
-echo "Hola, " . $nombre . ". Tienes " . $edad . " años."; // Resultado: Hola, Ana. Tienes 25 años.
+echo "Hola, " . $nombre . ". Tienes " . $edad . " años."; // Muestra: Hola, Ana. Tienes 25 años.
 ?>
 ```
 
-## Creación de Funciones
+### Creación de Funciones
+Las funciones en PHP permiten estructurar el código en tareas específicas y reutilizables.
 
-Las **funciones** en PHP permiten reutilizar bloques de código y definir tareas específicas. La sintaxis básica es:
-
+#### Ejemplo de Sintaxis Básica:
 ```php
 <?php
 function nombreFuncion($parametro1, $parametro2) {
@@ -60,42 +63,38 @@ function nombreFuncion($parametro1, $parametro2) {
 }
 ?>
 ```
-## Uso de `require` e `include`
 
-Podemos organizar el código en múltiples archivos e incluirlos usando `include` o `require`:
+### Uso de `require` e `include`
+Es posible organizar el código en varios archivos e incluirlos en el programa:
 
-- **`include`**: Incluye un archivo y permite que el programa siga ejecutándose si el archivo no se encuentra.
+- **`include`**: Incluye un archivo y permite que el programa continúe si el archivo no se encuentra.
 - **`require`**: Incluye un archivo, pero detiene la ejecución si el archivo no se encuentra.
 
-Ejemplo:
+#### Ejemplo:
+- **Archivo `funciones.php`:**
+  ```php
+  <?php
+  function saludar($nombre) {
+      return "¡Hola, " . $nombre . "!";
+  }
+  ?>
+  ```
+- **Archivo `index.php`:**
+  ```php
+  <?php
+  require 'funciones.php';
+  echo saludar("Carlos"); // Resultado: ¡Hola, Carlos!
+  ?>
+  ```
 
-**Archivo `funciones.php`:**
+### Buenas Prácticas en Funciones
+- **Nombres Claros**: Utilizar nombres que describan la función, como `calcularPromedio()`.
+- **Documentación**: Añadir comentarios sobre la funcionalidad y parámetros de cada función.
+- **Minimizar Efectos Secundarios**: Las funciones deberían depender solo de sus parámetros y evitar modificar variables globales.
 
-```php
-<?php
-function saludar($nombre) {
-    return "¡Hola, " . $nombre . "!";
-}
-?>
-```
-**Archivo `index.php`:**
+### Próximos Temas
+- **Control de Flujo**: Estructuras como `if`, `else`, `switch` y bucles (`for`, `while`, `foreach`).
+- **Manipulación Avanzada de Cadenas y Arreglos**: Técnicas avanzadas para manejar estos tipos de datos.
+- **Interacción con Bases de Datos**: Conectar PHP con bases de datos como MySQL.
 
-```php
-<?php
-require 'funciones.php';
-echo saludar("Carlos"); // Resultado: ¡Hola, Carlos!
-?>
-```
-
-## Buenas Prácticas al Escribir Funciones
-
-1. **Nombres significativos**: Utiliza nombres que describan claramente la tarea de cada función, como `calcularPromedio()`.
-2. **Documentación**: Añade comentarios para el propósito y parámetros de cada función.
-3. **Evitar efectos secundarios**: Las funciones deben, en lo posible, depender solo de sus parámetros y no modificar variables globales.
-
-## Próximos Temas
-
-1. **Control de Flujo**: Exploraremos estructuras como `if`, `else`, `switch`, y bucles (`for`, `while`, `foreach`).
-2. **Manipulación Avanzada de Cadenas y Arreglos**: Mejorar el manejo de estos tipos de datos.
-3. **Interacción con Bases de Datos**: Cómo conectar PHP con bases de datos como MySQL.
-
+---
