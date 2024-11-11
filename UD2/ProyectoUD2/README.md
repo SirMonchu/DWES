@@ -50,11 +50,3 @@ Este proyecto es una aplicación web simple para gestionar el alquiler de coches
 Este proyecto utiliza un estilo **neumórfico** que simula efectos de profundidad y suavidad en la interfaz, brindando una apariencia moderna y profesional. Este estilo está presente en:
 - Los contenedores de cada página, creando sombras sutiles en el fondo.
 - Los botones e inputs, que dan una sensación de relieve para que parezcan presionables.
-
-## Contribución
-
-Las contribuciones a este proyecto son bienvenidas. Si deseas proponer mejoras, puedes hacer un fork del repositorio, realizar cambios y enviar un pull request. También puedes abrir un issue para reportar errores o sugerir nuevas características.
-
----
-
-¡Gracias por visitar este proyecto de alquiler de coches en PHP!
