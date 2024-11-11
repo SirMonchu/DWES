@@ -20,8 +20,8 @@ Este proyecto es una aplicación web simple para gestionar el alquiler de coches
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/usuario/alquiler-coches.git
-   cd alquiler-coches
+   git clone https://github.com/SirMonchu/DWES.git
+   cd DWES/UD2/ProyectoUD2/index.php
    ```
 
 2. **Colocar el proyecto en un servidor local**:
@@ -30,7 +30,7 @@ Este proyecto es una aplicación web simple para gestionar el alquiler de coches
 
 3. **Abrir la aplicación**:
    - Inicia tu servidor local.
-   - Accede al proyecto desde tu navegador ingresando `http://localhost/alquiler-coches/index.php`.
+   - Accede al proyecto desde tu navegador ingresando `http://localhost/DWES/UD2/ProyectoUD2/index.php`.
 
 ## Tecnologías utilizadas
 
