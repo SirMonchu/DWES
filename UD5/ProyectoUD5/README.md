@@ -26,13 +26,13 @@ Este proyecto es un sistema de gestión de electrodomésticos desarrollado en PH
 5. Acceder al proyecto a través del navegador web
 
 ## Estructura del Proyecto
-/ProyectoUD5
-/config - Archivos de configuración
-/controllers - Controladores MVC
-/models - Modelos de datos
-/views - Vistas de la aplicación
-/database - Base de datos SQLite
-index.php - Punto de entrada
+- /ProyectoUD5
+- /config - Archivos de configuración
+- /controllers - Controladores MVC
+- /models - Modelos de datos
+- /views - Vistas de la aplicación
+- /database - Base de datos SQLite
+- index.php - Punto de entrada
 
 
 
